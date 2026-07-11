@@ -1,0 +1,9 @@
+project: inchi
+target: inchi_molfile_fuzzer
+cmds:
+  - cmd: /mayhem/inchi_molfile_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/inchi_molfile_fuzzer.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/inchi_molfile_fuzzer/testsuite

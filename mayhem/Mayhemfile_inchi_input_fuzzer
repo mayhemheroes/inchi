@@ -1,0 +1,9 @@
+project: inchi
+target: inchi_input_fuzzer
+cmds:
+  - cmd: /mayhem/inchi_input_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/inchi_input_fuzzer.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/inchi_input_fuzzer/testsuite
